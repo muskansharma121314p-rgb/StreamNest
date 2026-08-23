@@ -51,58 +51,11 @@ searchInput.addEventListener("input", function () {
     }
   });
 });
-//---------------------
-//GET STARTED/EMAIL
-//---------------------
 
-let searchText = "";
-//const searchInput = document.querySelector("#searchInput");
-const getStartedButton = document.querySelector(".get-started-btn");
 const heroTitle = document.querySelector(".hero-title");
 const emailInput = document.querySelector(".email-input");
 const message = document.querySelector(".message-text");
-const favoritesContainer = document.querySelector(".favorites-container");
 
-const closeMessage = document.querySelector(".close-message");
-closeMessage.addEventListener("click", function () {
-  message.textContent = ""; //make the close button work
-});
-
-getStartedButton.addEventListener("click", function () {
-  if (emailInput.value === "") {
-    //checks whether the input is empty , === means strictly equal to
-    message.textContent = "Please enter your email address!";
-    message.classList.add("error");
-    message.classList.remove("success");
-  } else {
-    console.log(emailInput.value);
-    message.textContent = `Welcome! Let's get started with ${emailInput.value}`;
-    message.classList.add("success");
-    message.classList.remove("error");
-
-    emailInput.value = ""; //change the value inside the input to an empty string
-  }
-
-  heroTitle.textContent = "Now Playing..."; //it will chnge the name after clicking
-});
-
-//---------------------
-//ENTER KEY
-//---------------------
-
-// click enter to get start
-emailInput.addEventListener("keydown", function (event) {
-  if (event.key === "Enter") {
-    // checked wheteher the user pressed enter
-    getStartedButton.click();
-  }
-});
-
-//console.log(emailInput.value);
-
-//message.textContent = `Welcome! Lets's get started with ${emailInput.value}`; //template literals
-
-//-----------------------
 //SIGN-IN
 //-----------------------
 const signInButton = document.querySelector(".signin-btn");
@@ -113,7 +66,7 @@ signInButton.addEventListener("click", function () {
 
   if (signInMessage.classList.contains("hidden")) {
     // this ask does signinmessage curretly have the hidden class, it return either true or false
-    signInButton.textContent = "Sign In";
+    signInButton.textContent = "About Project";
   } else {
     signInButton.textContent = "Close";
   }
