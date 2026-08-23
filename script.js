@@ -1,4 +1,4 @@
-console.log("Netflix js is working");
+console.log("StreamNest js is working");
 const firstMovie = document.querySelector(".movie-card");
 
 //get all movies
