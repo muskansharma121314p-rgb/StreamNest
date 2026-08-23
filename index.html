@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Netflix Test</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <!--Hero Section-->
+    <header class="hero" id="home">
+      <!--Navigation-->
+      <nav>
+        <h1 class="logo">NETFLIX</h1>
+
+        <div class="nav-links">
+          <a href="#" class="home-link">Home</a>
+          <a href="#trending" class="movies-link">Movies</a>
+          <a href="#" class="series-link">Series</a>
+        </div>
+
+        <button class="signin-btn">Sign In</button>
+        <p class="signin-message hidden">Sign in feature coming soon!</p>
+      </nav>
+
+      <!--Hero Content-->
+      <div class="hero-content">
+        <h1 class="hero-title">Unlimited movies, OTT, TV shows and more</h1>
+
+        <h3>Starts at ₹149 only. Cancel anytime</h3>
+
+        <p>
+          Ready to watch? Enter your email to create or restart your netflix
+          premium.
+        </p>
+
+        <div class="email-form">
+          <input type="email" class="email-input" placeholder="Email address" />
+          <button class="get-started-btn">Get Started</button>
+        </div>
+
+        <div class="message">
+          <span class="message-text"></span>
+          <button class="close-message">x</button>
+        </div>
+      </div>
+      <!--// top section of the website-->
+    </header>
+
+    <!--trending section-->
+
+    <section class="movies" id="trending">
+      <h2>Popular on Netflix</h2>
+
+      <div class="category-buttons">
+        <!-- we are storing info in side button-->
+        <button class="category-btn active" data-category="All">All</button>
+        <button class="category-btn" data-category="Dancing">Action</button>
+        <button class="category-btn" data-category="Motivational">
+          Comedy
+        </button>
+        <button class="category-btn" data-category="Action">Drama</button>
+        <button class="category-btn" data-category="Inspiration">Action</button>
+      </div>
+
+      <!--Search-->
+      <input type="text" id="searchInput" placeholder="Search movies..." />
+
+      <div class="movie-container">
+        <div class="movie-card" data-category="Dancing" data-title="Movie One">
+          <span class="badge">NEW</span>
+
+          <img src="./images/movie1.jpeg" alt="Movie One" />
+          <button class="play-btn" data-title="Movie One">Play</button>
+          <button class="favorite-btn">❤️</button>
+        </div>
+
+        <div
+          class="movie-card"
+          data-category="Motivational"
+          data-title="Movie Two"
+        >
+          <span class="badge">NEW</span>
+          <img src="./images/movie2.jpeg" alt="Movie Two" />
+          <button class="play-btn" data-title="Movie Two">Play</button>
+          <button class="favorite-btn">❤️</button>
+        </div>
+
+        <div class="movie-card" data-category="Action" data-title="Movie Three">
+          <span class="badge">NEW</span>
+          <img src="./images/movie3.jpeg" alt="Movie Three" />
+
+          <button class="play-btn" data-title="Movie Three">Play</button>
+          <button class="favorite-btn">❤️</button>
+        </div>
+
+        <div
+          class="movie-card"
+          data-category="Inspiration"
+          data-title="Movie Four"
+        >
+          <span class="badge">NEW</span>
+          <img src="./images/movie4.jpeg" alt="Movie Four" />
+          <button class="play-btn" data-title="Movie Four">Play</button>
+          <button class="favorite-btn">❤️</button>
+        </div>
+      </div>
+
+      <!-- Favorite Section-->
+
+      <section class="favorites">
+        <h2>My Favorites ❤️</h2>
+
+        <div class="favorites-container"></div>
+      </section>
+
+      <p class="play-message"></p>
+    </section>
+
+    <!--Video Player-->
+    <div class="video-player hidden">
+      <button class="close-video">✕</button>
+
+      <video id="movieVideo" controls>
+        <source src="" type="video/mp4" />
+        Your browser doesnot support video
+      </video>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
